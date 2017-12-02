@@ -1,27 +1,17 @@
 # CrudNG5
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+Crud NG5 Sample
 
-## Development server
+請注意，此不包含後端，若需要後端，請參考 [CrudWebApi](https://github.com/Study4/CrudWebApi)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 執行
 
-## Code scaffolding
+1. npm install
+2. 修改 proxy.config.json，將 target 內容改成後端 Server
+3. ng build --proxy-config proxy.config.json 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Issue
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. 尚未優化
+2. 尚未撰寫 Router
+3. 尚未移除延遲載入 module 機制

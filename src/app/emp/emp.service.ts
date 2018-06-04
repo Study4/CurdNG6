@@ -1,8 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Emp } from './emp';
@@ -15,7 +14,7 @@ const httpOptions = {
 @Injectable()
 export class EmpService {
 
-    private empUrl = '/api/emps';
+    private empUrl = '/api/employees';
 
     constructor(
         private http: HttpClient) { }

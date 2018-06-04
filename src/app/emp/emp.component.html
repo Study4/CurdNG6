@@ -1,12 +1,25 @@
 ﻿<div>
+
     <form>
-        <label>FirstName</label>
-        <input type="text" name="fristName" [(ngModel)]="emp.firstName" />
-        <label>LastName</label>
-        <input type="text" name="lastName" [(ngModel)]="emp.lastName" />
-        <button (click)="onAdd()">新增</button>
-        <button (click)="onUpdate()">更新</button>
+        <div class="form-row">
+            <div class="col-auto">
+                <input type="text" name="fristName" class="form-control" 
+                    [(ngModel)]="emp.firstName" placeholder="First Name" />
+            </div>
+            <div class="col-auto">
+                <input type="text" name="lastName" class="form-control" 
+                    [(ngModel)]="emp.lastName" placeholder="Last Name" />            
+            </div>
+            <div class="col-auto">
+                <button class="btn" (click)="onAdd()">新增</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn" (click)="onUpdate()">更新</button>
+            </div>
+        </div>
     </form>
+
+    <br/>
 
     <div>
         <table class="table table-striped">

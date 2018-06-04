@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-import 'rxjs/add/operator/switchMap';
+import { switchMap } from 'rxjs/operators';
 
 import { Emp } from './emp';
 import { EmpService } from './emp.service';
@@ -22,8 +22,11 @@ export class DetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap
-            .switchMap((params: ParamMap) => this.empService.get(+params.get('id')))
-            .subscribe(data => this.emp = data);
+        .pipe(
+            switchMap((params: ParamMap) =>
+              this.empService.get(+params.get("id")),
+            ),
+        ).subscribe(data => this.emp = data);
     }
 
     goBack(): void {

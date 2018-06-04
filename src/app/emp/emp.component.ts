@@ -23,11 +23,11 @@ export class EmpComponent implements OnInit {
         this.emp.id = 0;
         this.emp.firstName = this.emp.firstName.trim();
         if (!this.emp.firstName) {
-            alert("firstName ¥²¶ñ");
+            alert("firstName ä¸å¯ç‚ºç©º");
             return;
         }
         if (!this.emp.lastName) {
-            alert("lastName ¥²¶ñ");
+            alert("lastName ä¸å¯ç‚ºç©º");
             return;
         }
 
